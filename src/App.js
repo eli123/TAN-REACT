@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import { Grid } from "@mui/material";
+import SignUpForm from "./components/SignUpForm";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+export default () => {
+    
+    return (
+        <div>
+            <Grid
+                container
+                spacing={0}
+                direction="column"
+                alignItems="center"
+                justifyContent="center"
+                style={{ minHeight: '100vh'}}
+                >
 
-export default App;
+                <Grid item xs={3} style={{border:'1px #067f7a solid', backgroundColor:'#FFF', padding:'50px', borderRadius:'4px'}}>
+                <SignUpForm justifyContent="center" alignItems="center" style={{backgroundColor:'#FFF', textAlign:'center'}}/>
+                </Grid>   
+                
+                </Grid> 
+        </div>
+    )
+  };
